@@ -9,6 +9,13 @@
             {#{{ encore_entry_link_tags('app') }}#}
         {% endblock %}
 
+        {% block aside %}
+
+            <li><a href="{{ path('contact')}}" >Accueil</a></li>
+            <li><a href="{{ path('contactCity', {'city': 'Montjaaj'})}}" >Montjaaj</a></li>
+            <li><a href="{{ path('contactCity', {'city': 'Jaaj'})}}" >Jaaj</a></li>
+        {% endblock %}
+
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
