@@ -9,18 +9,24 @@
             {#{{ encore_entry_link_tags('app') }}#}
         {% endblock %}
 
-        {% block aside %}
-
-            <li><a href="{{ path('contact')}}" >Accueil</a></li>
-            <li><a href="{{ path('contactCity', {'city': 'Montpellier'})}}" >Montpellier</a></li>
-            <li><a href="{{ path('contactCity', {'city': 'Sète'})}}" >Sète</a></li>
-        {% endblock %}
-
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
         {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
+
+        {% block aside %}
+            <ul>
+            <li><a href="{{ path('accueil')}}" >Accueil</a></li>
+            <li><a href="{{ path('blog')}}" >Blog</a></li>
+            <li><a href="{{ path('contact')}}" >Contact</a></li>
+            <ul>
+                <li><a href="{{ path('contactCity', {'city': 'Montpellier'})}}" >Montpellier</a></li>
+                <li><a href="{{ path('contactCity', {'city': 'Sète'})}}" >Sète</a></li>
+            </ul>
+            <li><a href="{{ path('article')}}" >Créer un article</a></li>
+            </ul>
+        {% endblock %}
     </body>
 </html>
